@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script type="module" src="/src/script/app.js"></script>
+    <link rel="stylesheet" href="/src/style/main-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/src/pages/main.html"><img src="/src/images/Trắng-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/src/pages/main.html">Homepage <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Edit your shop</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="itemSearch">
+            <button class="btn my-2 my-sm-0" onclick="searchItems(event)">Search</button>
+          </form>
+        </div>
+      </nav>
+      <!--Nav bar end-->
+      <div class="item-list-banner"><h1 class="banner-text">Quản lý sản phẩm</h1></div>
+
+      <select id="sortOption">
+        <option disabled selected>Sort by:</option>
+        <option id="sortItemByPrice" value="sortByPriceLH">Price from low to high</option>
+        <option id="">none</option>
+      </select>
+
+      <!--Item list container-->
+      <div class="item-list-container" id="itemsContainer">
+      </div>
+
+
+        <!-- button !-->
+<div class="add-item-form">
+  <h2>Add New Item</h2>
+  <input type="text" id="newItemName" placeholder="Name">
+  <input type="number" id="newItemPrice" placeholder="Price">
+  <input type="text" id="newItemImage" placeholder="URL">
+  <button onclick="addNewItem()">Add Item</button>
+</div>
+
+
+      
+<div id="editItemForm" class="edit-item-form" style="display:none;">
+  <input type="hidden" id="editItemId">
+  <input type="text" id="editName" placeholder="Name">
+  <input type="number" id="editPrice" placeholder="Price">
+  <input type="text" id="editImage" placeholder="URL">
+  <button onclick="confirmEditForm()">Save Changes</button>
+</div>
+
+    
+
+      
+
+
+
+</body>
+</html>

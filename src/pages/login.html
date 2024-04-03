@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/src/style/login-style.css"> 
+</head>
+<body>
+
+    <div class="banner">
+        <div class="banner-content">
+            <div class="banner-logo">
+                <img src="/src/images/Trắng-logo.png">
+            </div>
+
+            <div class="banner-text">
+                <h1> Bùi Ngọc Hưng - Quản lý sản phẩm</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <form id="loginForm" onsubmit="login(); return false;">
+            <h2>Login admin/admin</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <div id="loginMessage" class="loginMessage"></div>
+
+
+    <script src="/src/script/login.js"></script>
+</body>
+</html>
